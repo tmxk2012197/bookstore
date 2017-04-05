@@ -3,10 +3,52 @@ body {
     padding-bottom: 20px;
 }
 
+hr {
+    border: none;
+    height: 1px;
+    color: #333333;
+    background-color: #333333;
+}
+.container {
+    width: 90%;
+}
+
 .navbar {
     margin-bottom: 20px;
 }
 
 .box {
     border: 1px solid red;
+}
+
+.page-top {
+    width: 100%;
+    height: 20px;
+    background-color: #f46b42;
+    margin-top: -20px;
+}
+
+.home-headline {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    margin: -13px auto auto;
+}
+
+.home-headline span {
+    background-color: #231F20;
+    padding: 5px 22px;
+}
+
+.column-xs-8 {
+    display: inline-block;
+    width: 60%;
+}
+.column-xs-4 {
+    display: inline-block;
+}
+.image-responsive {
+    width: 400px;
+    height: 300px;
 }
