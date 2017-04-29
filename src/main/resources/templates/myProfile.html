@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row" style="margin-bottom: -110px;">
         <div class="col-xs-8">
-            <h2 class="section-headline"><span th:text="${#strings.toUpperCase{user.username}}"></span></h2>
+            <h2 class="section-headline"><span th:text="${#strings.toUpperCase(user.username)}"></span></h2>
         </div>
         <div class="col-xs-4">
             <img src="/image/logo.jpg" class="img-responsive"/>
@@ -49,7 +49,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="userName">Username</label>
-                                        <input type="text" class="form-control" id="userName" name="userName" th:value="${user.userName}"/>
+                                        <input type="text" class="form-control" id="userName" name="username" th:value="${user.username}"/>
                                     </div>
                                     <div class="form-group">
                                         <label for="currentPassword">Current Password</label>
@@ -73,45 +73,6 @@
                                     </div>
                                     <p style="color:#828282">Enter the new password in both fields to change the current password.</p>
                                     <button type="submit" class="btn btn-primary">Create new account</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- log in -->
-                <div class="tab-pane fade" id="tab2" th:classappend="${classActiveLogin} ? 'in active'">
-                    <div class="panel-group">
-                        <div class="panel panel-default" style="border: none;">
-                            <div class="panel-body" style="background-color: #ededed; margin-top: 20px">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="username">Username:</label>
-                                        <input required="required" type="text" class="form-control" id="username" name="username"/>
-                                        <p style="color: #828282;">Please enter your username here.</p>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">Password:</label>
-                                        <input required="required" type="password" class="form-control" id="password" name="password"/>
-                                        <p style="color: #828282;">Enter your password.</p>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Log In</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- forget password -->
-                <div class="tab-pane fade" id="tab3" th:classappend="${classActiveForgetPassword} ? 'in active'">
-                    <div class="panel-group">
-                        <div class="panel panel-default" style="border: none;">
-                            <div class="panel-body" style="background-color: #ededed; margin-top: 20px">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="recoverEmail">Your Email</label>
-                                        <input required="required" type="text" class="form-control" id="recoverEmail" name="email"/>
-                                        <p style="color: #828282;">Please enter your registered email address here.</p>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
                             </div>
                         </div>

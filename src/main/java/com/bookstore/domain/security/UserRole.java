@@ -10,7 +10,6 @@ public class UserRole {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long userRoleId;
-
     //eager: load it with the rest fields
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
@@ -19,6 +18,10 @@ public class UserRole {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "role_id")
     private Role role;
+
+    public UserRole() {
+
+    }
 
     public UserRole(User user, Role role) {
         this.user = user;

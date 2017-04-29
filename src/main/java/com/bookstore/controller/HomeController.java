@@ -100,6 +100,7 @@ public class HomeController {
         Authentication authentication = new UsernamePasswordAuthenticationToken(userDetails, userDetails.getPassword(), userDetails.getAuthorities());
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
+        model.addAttribute("user", user);
         model.addAttribute("classActiveEdit", true);
         return "myProfile";
     }
