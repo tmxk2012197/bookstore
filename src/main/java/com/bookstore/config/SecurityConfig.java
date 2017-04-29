@@ -23,7 +23,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             "/image/**",
             "/",
             "/newAccount",
-            "/forgetPassword"
+            "/forgetPassword",
+            "/login",
+            "/fonts/**"
     };
 
     @Autowired
